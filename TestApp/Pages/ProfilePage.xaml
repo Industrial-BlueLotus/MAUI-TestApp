@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="TestApp.ProfilePage"
+             Title="ProfilePage">
+
+    <StackLayout>
+        <StackLayout.Resources>
+            <!--<Style x:Key="labelStyle"
+                   TargetType="Label">
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Teal" />
+            </Style>
+            <Style x:Key="bStyle"
+                   TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="white" />
+            </Style>-->
+            <Style x:Key="buttonStyle"
+                   TargetType="Button"
+                   >
+                <Setter Property="TextColor" Value="white" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="BorderWidth" Value="5" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+
+            </Style>
+
+        </StackLayout.Resources>
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <toolkit:AvatarView
+                           
+                           ImageSource="user.jpg"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"   
+                           HeightRequest="100"
+                           WidthRequest="100"
+                           CornerRadius="50" />
+
+        <Grid Grid.Row="1" ColumnSpacing="30" RowSpacing="15"  >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="Auto"  />
+            </Grid.ColumnDefinitions>
+
+
+            <Image Grid.Row="0" Source="user_icon.png" HeightRequest="25" VerticalOptions="Center" />
+            <Image Grid.Row="1" Source="mobile.png" HeightRequest="22" VerticalOptions="Center"/>
+            <Image Grid.Row="2" Source="mail.png" HeightRequest="20"  VerticalOptions="Center" />
+
+            <Label VerticalOptions="Start" Grid.Column="1" Text="Name" TextColor="Gray" FontSize="12"/>
+            <Label VerticalOptions="End" Grid.Column="1" Text="Scarlett Jhonsan" FontAttributes="Bold"/>
+            <Label VerticalOptions="Start"  Grid.Row="1" Grid.Column="1" Text="Phone" TextColor="Gray" FontSize="12"/>
+            <Label VerticalOptions="End" Grid.Row="1" Grid.Column="1" Text="+44 5674 4432" FontAttributes="Bold"/>
+            <Label VerticalOptions="Start" Grid.Row="2" Grid.Column="1" Text="Mail" TextColor="Gray" FontSize="12"/>
+            <Label VerticalOptions="End" Grid.Row="2" Grid.Column="1" Text="scarlettjhonsan99@gmail.com" FontAttributes="Bold"/>
+
+        </Grid>
+        <Button
+                HeightRequest="50"
+                WidthRequest="100"
+                Grid.Row="5"
+                 x:Name="Backbtn"
+                Text="Back"
+                 Style="{StaticResource buttonStyle}"
+                SemanticProperties.Hint="Navigate When Clicked"
+                Clicked="OnBackClicked"
+                HorizontalOptions="Center" />
+    </Grid>
+        </StackLayout>
+</ContentPage>
+

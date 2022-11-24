@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.AboutPage"
+             Title="AboutPage">
+    <StackLayout>
+        <StackLayout.Resources>
+            <Style x:Key="labelStyle"
+                   TargetType="Label">
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Teal" />
+            </Style>
+            <Style x:Key="bStyle"
+                   TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="white" />
+            </Style>
+            <Style x:Key="buttonStyle"
+                   TargetType="Button"
+                   >
+                <Setter Property="TextColor" Value="white" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="BorderWidth" Value="5" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+
+            </Style>
+
+            <Style x:Key="ImgStyle"
+                   TargetType="ImageButton"
+                   >
+                <Setter Property="CornerRadius" Value="15" />
+            </Style>
+
+        </StackLayout.Resources>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100"  />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Welcome to About page"
+                    Style="{StaticResource labelStyle}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+            <BoxView Grid.Row="5"
+                 Color="LightGray" />
+
+            <Label Grid.Row="5"
+                  
+               Style="{StaticResource bStyle}"
+               Text="To Go Back press below"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+            
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10" Margin="10" Grid.Row="2" HeightRequest="250">
+                <StackLayout>
+                    <Label Text="Card Example"
+                        FontSize="14"
+                        FontAttributes="Bold" />
+                    <BoxView Color="Gray"
+                            HeightRequest="2"
+                            HorizontalOptions="Fill" />
+                    <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+                    <Image
+                         Source="test.jpg"
+                        Style="{StaticResource ImgStyle}"
+                        SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                        WidthRequest="220"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Button
+                HeightRequest="50"
+                WidthRequest="100"
+                Grid.Row="6"
+                 x:Name="Backbtn"
+                Text="Back"
+                 Style="{StaticResource buttonStyle}"
+                SemanticProperties.Hint="navigate when clicked"
+                Clicked="OnBackClicked"
+                HorizontalOptions="Center" />
+
+        </Grid>
+
+
+
+    </StackLayout>
+</ContentPage>
+
