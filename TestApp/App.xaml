@@ -1,8 +1,5 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TestApp"
-             x:Class="TestApp.App">
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TestApp" x:Class="TestApp.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -11,4 +8,25 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+
+    <Application.MainPage>
+        <Shell FlyoutBehavior="Flyout" FlyoutHeaderBehavior="Fixed" FlyoutVerticalScrollMode="Auto">
+            <FlyoutItem Title="Home">
+                <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+            </FlyoutItem>
+            <FlyoutItem Title="Detail">
+                <ShellContent Title="Detail" ContentTemplate="{DataTemplate local:DetailPage}" Route="DetailPage" />
+            </FlyoutItem>
+            <FlyoutItem Title="Category">
+                <ShellContent Title="Category" ContentTemplate="{DataTemplate local:CategoryPage}" Route="CategoryPage" />
+            </FlyoutItem>
+            <FlyoutItem Title="Profile">
+                <ShellContent Title="Profile" ContentTemplate="{DataTemplate local:ProfilePage}" Route="ProfilePage" />
+            </FlyoutItem>
+            <FlyoutItem Title="About">
+                <ShellContent Title="About" ContentTemplate="{DataTemplate local:AboutPage}" Route="AboutPage" />
+            </FlyoutItem>
+
+        </Shell>
+    </Application.MainPage>
 </Application>
