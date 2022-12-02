@@ -29,12 +29,25 @@
                 <Setter Property="FontAttributes" Value="Bold" />
              
             </Style>
-           
+            <Style x:Key="button1Style" TargetType="Button">
+                <Setter Property="TextColor" Value="white" />
+                <Setter Property="BackgroundColor" Value="green" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="BorderWidth" Value="5" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+
+            </Style>
+
         </StackLayout.Resources>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="100"  />
+                <RowDefinition Height="100" />
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -55,11 +68,12 @@
                Text="To Go Back press below"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
-            
+            <Button x:Name="PdfBtn" Grid.Row="2" Text="Click me to generate PDF" SemanticProperties.Hint="Click button to generate PDF" Style="{StaticResource button1Style}" Clicked="GeneratePDF" HorizontalOptions="Center" />
+
             <Button
                 HeightRequest="50"
                 WidthRequest="100"
-                Grid.Row="2"
+                Grid.Row="3"
                  x:Name="Backbtn"
                 Text="Back"
                  Style="{StaticResource buttonStyle}"

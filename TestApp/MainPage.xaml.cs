@@ -1,12 +1,15 @@
-﻿namespace TestApp;
+﻿using IronPdf;
+
+
+namespace TestApp;
 
 public partial class MainPage : ContentPage
 {
-	
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+
+    public MainPage()
+    {
+        InitializeComponent();
+    }
 
 
     private void OnDetailClicked(object sender, EventArgs e)
@@ -25,7 +28,14 @@ public partial class MainPage : ContentPage
     {
         Shell.Current.GoToAsync("//ProfilePage");
     }
-
+    private void GeneratePDF(object sender, EventArgs e)
+    {
+        ChromePdfRenderer renderer = new ChromePdfRenderer();
+        var doc = renderer.RenderHtmlAsPdf("<h1>Hello IronPDF!</h1> <p>I'm using IronPDF MAUI!</p>");
+        //Saves the memory stream as file.
+        SaveService saveService = new SaveService();
+        saveService.SaveAndView("IronPDF HTML string.pdf", "application/pdf", doc.Stream);
+    }
 
 }
 

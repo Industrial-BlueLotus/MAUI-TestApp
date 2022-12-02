@@ -1,25 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestApp.MainPage">
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TestApp.MainPage" Title="TestApp">
 
     <StackLayout>
         <StackLayout.Resources>
-            <Style x:Key="labelStyle"
-                   TargetType="Label">
+            <Style x:Key="labelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="25" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="Teal" />
             </Style>
-            <Style x:Key="bStyle"
-                   TargetType="Label">
+            <Style x:Key="bStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontAttributes" Value="Italic" />
                 <Setter Property="TextColor" Value="white" />
             </Style>
-            <Style x:Key="DetStyle"
-                   TargetType="Button"
-                   >
+            <Style x:Key="DetStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="white" />
                 <Setter Property="BackgroundColor" Value="Grey" />
                 <Setter Property="BorderColor" Value="white" />
@@ -31,9 +25,7 @@
 
             </Style>
 
-            <Style x:Key="CatStyle"
-                   TargetType="Button"
-                   >
+            <Style x:Key="CatStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="white" />
                 <Setter Property="BackgroundColor" Value="DarkSeaGreen" />
                 <Setter Property="BorderColor" Value="white" />
@@ -45,9 +37,7 @@
 
             </Style>
 
-            <Style x:Key="AbtStyle"
-                   TargetType="Button"
-                   >
+            <Style x:Key="AbtStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="white" />
                 <Setter Property="BackgroundColor" Value="Black" />
                 <Setter Property="BorderColor" Value="white" />
@@ -59,9 +49,7 @@
 
             </Style>
 
-            <Style x:Key="ProfStyle"
-                   TargetType="Button"
-                   >
+            <Style x:Key="ProfStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="white" />
                 <Setter Property="BackgroundColor" Value="DarkCyan" />
                 <Setter Property="BorderColor" Value="white" />
@@ -74,27 +62,16 @@
             </Style>
 
         </StackLayout.Resources>
-        <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Image Source="dotnet_bot.png" SemanticProperties.Description="Cute dot net bot waving hi to you!" HeightRequest="200" HorizontalOptions="Center" />
 
-        <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-        <Label Text="Welcome to MAUI test app"
-                    Style="{StaticResource labelStyle}"
-               HorizontalOptions="Center"
-               VerticalOptions="Center" />
+        <Label Text="Hello, World!" SemanticProperties.HeadingLevel="Level1" FontSize="32" HorizontalOptions="Center" />
+        <Label Text="Welcome to MAUI test app" Style="{StaticResource labelStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
 
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
-                <RowDefinition Height="100"  />
+                <RowDefinition Height="100" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -102,53 +79,13 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button
-                HeightRequest="50"
-                WidthRequest="120"
-                Grid.Row="0"
-                Grid.Column="0"
-                Style="{StaticResource DetStyle}" 
-                 x:Name="DetailBtn"
-                Text="Details"
-                SemanticProperties.Hint="navigate when clicked"
-                Clicked="OnDetailClicked"
-                HorizontalOptions="Center" />
+            <Button HeightRequest="50" WidthRequest="120" Grid.Row="0" Grid.Column="0" Style="{StaticResource DetStyle}" x:Name="DetailBtn" Text="Details" SemanticProperties.Hint="navigate when clicked" Clicked="OnDetailClicked" HorizontalOptions="Center" />
 
-            <Button
-                HeightRequest="50"
-                WidthRequest="120"
-                Grid.Row="0"
-                Grid.Column="1"
-                Style="{StaticResource CatStyle}" 
-                 x:Name="CategoryBtn"
-                Text="Category"
-                SemanticProperties.Hint="navigate when clicked"
-                Clicked="OnCateClicked"
-                HorizontalOptions="Center" />
+            <Button HeightRequest="50" WidthRequest="120" Grid.Row="0" Grid.Column="1" Style="{StaticResource CatStyle}" x:Name="CategoryBtn" Text="Category" SemanticProperties.Hint="navigate when clicked" Clicked="OnCateClicked" HorizontalOptions="Center" />
 
-            <Button
-                HeightRequest="50"
-                WidthRequest="120"
-                Grid.Row="1"
-                Grid.Column="0"
-                Style="{StaticResource AbtStyle}" 
-                 x:Name="AboutBtn"
-                Text="About"
-                SemanticProperties.Hint="navigate when clicked"
-                Clicked="OnAboutClicked"
-                HorizontalOptions="Center" />
+            <Button HeightRequest="50" WidthRequest="120" Grid.Row="1" Grid.Column="0" Style="{StaticResource AbtStyle}" x:Name="AboutBtn" Text="About" SemanticProperties.Hint="navigate when clicked" Clicked="OnAboutClicked" HorizontalOptions="Center" />
 
-            <Button
-                HeightRequest="50"
-                WidthRequest="120"
-                Grid.Row="1"
-                Grid.Column="1"
-                Style="{StaticResource ProfStyle}" 
-                 x:Name="ProfileBtn"
-                Text="Profile"
-                SemanticProperties.Hint="navigate when clicked"
-                Clicked="OnProfClicked"
-                HorizontalOptions="Center" />
+            <Button HeightRequest="50" WidthRequest="120" Grid.Row="1" Grid.Column="1" Style="{StaticResource ProfStyle}" x:Name="ProfileBtn" Text="Profile" SemanticProperties.Hint="navigate when clicked" Clicked="OnProfClicked" HorizontalOptions="Center" />
         </Grid>
 
 

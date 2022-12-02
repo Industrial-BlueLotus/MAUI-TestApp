@@ -35,7 +35,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Images\splash.jpg"  Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Images\splash.jpg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -49,33 +49,40 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\mail.png" />
-	  <None Remove="Resources\Images\mobile.png" />
-	  <None Remove="Resources\Images\splash.jpg" />
-	  <None Remove="Resources\Images\test.jpg" />
-	  <None Remove="Resources\Images\user.jpg" />
-	  <None Remove="Resources\Images\user_icon.png" />
+		<None Remove="Resources\Images\mail.png" />
+		<None Remove="Resources\Images\mobile.png" />
+		<None Remove="Resources\Images\splash.jpg" />
+		<None Remove="Resources\Images\test.jpg" />
+		<None Remove="Resources\Images\user.jpg" />
+		<None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="3.0.0" />
+		<PackageReference Include="FreeSpire.PDF" Version="8.6.0" />
+		<PackageReference Include="IronPdf" Version="2022.11.10347" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="System.Windows.Extensions" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\AboutPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\CategoryPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\DetailPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\ProfilePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+		<MauiXaml Update="Pages\AboutPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\CategoryPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\DetailPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\ProfilePage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>
